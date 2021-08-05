@@ -1,0 +1,48 @@
+import java.io.*;
+import java.util.*;
+
+public class meetingRoom {
+	static class MR implements Comparable<MR>{
+		int start,end;
+		int times;
+		public MR(int start,int end) {
+			this.start =start;
+			this.end = end;
+			times = end-start;
+		}
+		
+		@Override
+		public int compareTo(MR m) {
+			if(this.times==m.times) {
+				return this.start-m.start;
+			}
+			return this.times-m.times;
+		}
+	}
+	public static void main(String args[]) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int N = Integer.parseInt(br.readLine());
+		MR rooms[] = new MR[N+1];
+		rooms[0] = new MR(0,0);
+		for(int i =0;i<N;i++) {
+			String input[] = br.readLine().split(" ");
+			int st=Integer.parseInt(input[0]);
+			int ed = Integer.parseInt(input[1]);
+			rooms[i+1] = new MR(st,ed);
+		}
+		Arrays.sort(rooms);
+		int f_start = rooms[1].start;
+		int f_end = rooms[1].end;
+		int cnt = 0;
+		for(int i =2;i<N+1;i++) {
+			if(!(rooms[i].start <= f_end || rooms[i].end <=f_end || 
+					rooms[i].start >= f_start || rooms[i].end >=f_start)) {
+				cnt++;
+			}
+			f_start = Math.min(f_start, rooms[i].start);
+			f_end = Math.max(f_end, rooms[i].end);
+		}
+		System.out.println(cnt);
+		
+	}
+}

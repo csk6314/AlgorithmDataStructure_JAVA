@@ -1,0 +1,50 @@
+import java.io.*;
+import java.util.Arrays;
+
+
+public class ship {
+	public static void main(String args[]) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int N = Integer.parseInt(br.readLine());
+		String ip[] = br.readLine().split(" ");
+		int crayne[] = new int[N];
+		for(int i = 0;i<N;i++) {
+			crayne[i] = Integer.parseInt(ip[i]);
+		}
+		int M =Integer.parseInt(br.readLine());
+		int boxes[] = new int[M];
+		ip = br.readLine().split(" ");
+		for(int i =0;i<M;i++) {
+			boxes[i] = Integer.parseInt(ip[i]);
+		}
+		Arrays.sort(boxes);
+		Arrays.sort(crayne);
+		int sum=0;
+		int cnt[] = new int[N];
+		boolean Flag = true;
+		for(int i =0;i<boxes.length;i++) {
+			Flag = true;
+			for(int j =0;j<crayne.length;j++) {
+				if(crayne[N-1-j] >= boxes[boxes.length-1-i]) {
+					crayne[N-1-j] -= boxes[boxes.length-1-i];
+					cnt[N-1-j]++;
+					Flag = false;
+					break;
+				}
+			}
+			if(Flag) {
+				break;
+			}
+		}
+		if(Flag) {
+			System.out.println(-1);
+		} else {
+			int res=0;
+			for(int i=0;i<N;i++) {
+				res=Math.max(res, cnt[i]);
+			}
+			System.out.println(res);
+		}
+		
+	}
+}

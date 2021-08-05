@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+public class SortingGame {
+	public static void main(String args[]) throws IOException {
+		BufferedReader br  = new BufferedReader(new InputStreamReader(System.in));
+		String input[] = br.readLine().split(" ");
+		int N = Integer.parseInt(input[0]);
+		int K = Integer.parseInt(input[1]);
+		String num_s[] = br.readLine().split(" ");
+		StringBuilder seq = new StringBuilder();
+		for(int i =0;i<num_s.length;i++) {
+			seq.append(num_s[i]);
+		}
+		char seqc[] = seq.toString().toCharArray();
+		String s = seqc.toString();
+		System.out.println(s);
+		
+	}
+	static void reverse(char seq[],int strt,int K) {
+		for(int i=strt,j=strt+K-1;i<j;i++,j--) {
+			char temp = seq[i];
+			seq[i] = seq[j];
+			seq[j] = temp;
+		}
+	}
+}

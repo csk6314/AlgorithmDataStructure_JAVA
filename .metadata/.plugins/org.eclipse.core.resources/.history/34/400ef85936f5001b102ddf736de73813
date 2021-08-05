@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.Arrays;
+
+
+public class ship {
+	public static void main(String args[]) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int N = Integer.parseInt(br.readLine());
+		String ip[] = br.readLine().split(" ");
+		int crayne[] = new int[N];
+		for(int i = 0;i<N;i++) {
+			crayne[i] = Integer.parseInt(ip[i]);
+		}
+		int M =Integer.parseInt(br.readLine());
+		int boxes[] = new int[M];
+		ip = br.readLine().split(" ");
+		for(int i =0;i<M;i++) {
+			boxes[i] = Integer.parseInt(ip[i]);
+		}
+		Arrays.sort(boxes);
+		Arrays.sort(crayne);
+		int cnt[] = new int[N];
+		int st=0;
+		for(int i =0;i<M;i++) {
+			if(boxes[i] <= crayne[st]) {
+				cnt[st]++;
+			} else {
+				st++;
+				i--;
+			}
+		}
+		System.out.println(Arrays.toString(cnt));
+		
+	}
+}

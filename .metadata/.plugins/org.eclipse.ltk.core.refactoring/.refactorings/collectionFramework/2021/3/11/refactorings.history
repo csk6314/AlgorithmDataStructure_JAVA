@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;&apos; to &apos;collectionFramework.Android.getname()&apos;&#x0D;&#x0A;- Original project: &apos;collectionFramework&apos;&#x0D;&#x0A;- Destination element: &apos;collectionFramework.Android.getname()&apos;&#x0D;&#x0A;- Original element: &apos;collectionFramework.Android.getname()&apos;" description="Copy method" destination="/src&lt;collectionFramework{studentlist.java[Android~getname" element1="/src&lt;collectionFramework{studentlist.java[Android~getname" flags="589830" id="org.eclipse.jdt.ui.copy" members="1" policy="org.eclipse.jdt.ui.copyMembers" stamp="1615389153387" version="1.0"/>
+</session>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;&apos; to &apos;stack_JAVA.infix2postfix.convertPostfix(...)&apos;&#x0D;&#x0A;- Original project: &apos;stack_JAVA&apos;&#x0D;&#x0A;- Destination element: &apos;stack_JAVA.infix2postfix.convertPostfix(...)&apos;&#x0D;&#x0A;- Original element: &apos;stack_JAVA.infix2postfix.priority(...)&apos;" description="Copy method" destination="/src&lt;stack_JAVA{infix2postfix.java[infix2postfix~convertPostfix~QString;" element1="/src&lt;stack_JAVA{infix2postfix.java[infix2postfix~priority~QCharacter;" flags="589830" id="org.eclipse.jdt.ui.copy" members="1" policy="org.eclipse.jdt.ui.copyMembers" stamp="1623074895110" version="1.0"/>
+</session>

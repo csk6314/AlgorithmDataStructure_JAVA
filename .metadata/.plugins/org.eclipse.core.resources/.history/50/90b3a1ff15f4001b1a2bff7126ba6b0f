@@ -1,0 +1,8 @@
+import java.io.*;
+public class changes {
+	public static void main(String args[]) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int kinds[] = {500,100,50,10,5,1};
+		System.out.println(kinds[0]);
+	}
+}

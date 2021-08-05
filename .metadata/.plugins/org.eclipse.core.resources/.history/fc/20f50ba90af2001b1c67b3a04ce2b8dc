@@ -1,0 +1,22 @@
+import java.io.*;
+public class sugar {
+	public static void main(String args[]) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int N=Integer.parseInt(br.readLine());
+		
+		//5kg그램으로만 먼저.
+		int fivek = N/5;
+		if(N%5 > 0) {
+			int sec_N = N%5;
+			if(sec_N % 3 >0) {
+				if(N%3 ==0) {
+					System.out.println(N/3);
+				} else {
+					System.out.println(-1);
+				}
+			} else {
+				System.out.println(fivek + (sec_N/3));
+			}
+		}
+	}
+}
