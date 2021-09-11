@@ -28,9 +28,9 @@
     <fullyQualifiedTypeName name="ChineseCabage.Cell"/>
     <fullyQualifiedTypeName name="jdk.internal.org.jline.reader.impl.completer.AggregateCompleter"/>
     <fullyQualifiedTypeName name="LeastDistance.edge"/>
-    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
     <fullyQualifiedTypeName name="java.util.Queue"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.util.Map.Entry"/>
+    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
 </qualifiedTypeNameHistroy>
