@@ -1,6 +1,6 @@
 import java.io.*;
 import java.util.Arrays;
-import java.util.Collections;
+
 public class sortCoordinate {
 	static class Point implements Comparable<Point> {
 		int x,y;
