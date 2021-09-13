@@ -4,6 +4,7 @@ import java.io.*;
 
 public class QuadTree {
 	static int data[][];
+	
 	static StringBuilder sb = new StringBuilder();
 	public static void main(String args[]) throws IOException {
 		
@@ -36,8 +37,9 @@ public class QuadTree {
 		}
 	}
 	static void print_compress(int st_x,int st_y,int dv) {
-		sb.append("(");
+		sb.append("("); 
 		compress(st_x,st_y,dv);
+		// 0000 or 1111반복시 괄호 및 숫자 제거 후 추가
 		if(sb.substring(sb.length()-4, sb.length()).equals("0000")) {
 			sb.delete(sb.length()-5, sb.length());
 			sb.append("0");
